@@ -35,7 +35,7 @@ const initialValues =  {
 export function LoginPage({handleSubmit,values,errors,touched,handleChange,handleBlur})  {
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300 max-w-5xl mx-auto">      
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300 w-3/4 mx-auto">      
       <div className="text-primary-lightest mb-6 text-9xl">
         <TbShoppingCartFilled /> 
       </div>
