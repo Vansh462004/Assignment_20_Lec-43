@@ -1,12 +1,12 @@
 import React, { ButtonHTMLAttributes, FC } from "react";
-
+import '../index.css';
 
 type buttonProps = {
   theme?:"primary" | "secondary" ;
-  size:"small" | "medium" | "large";
+  name:string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button:FC<buttonProps> = ({ theme,className,...rest }) => {
+const Button:FC<buttonProps> = ({ theme,name,className,...rest }) => {
 
   let themeClass = "bg-blue-700 text-white"; 
   if (theme === "secondary") {
@@ -18,12 +18,14 @@ const Button:FC<buttonProps> = ({ theme,className,...rest }) => {
       {...rest}
       className={"border rounded-md px-6 text-2xl text-white py-1 mx-2 "+ themeClass}
     >
+        {name}
     </button>
   );
 }
 
 Button.defaultProps={
     theme:"primary",
+    name:"primary",
 }
 
 export default Button;

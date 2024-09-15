@@ -1,6 +1,7 @@
 import { Meta, StoryFn } from "@storybook/react";
 import Button from "./button";
 import React from "react";
+import '../index.css';
 
 
 const ButtonStory = {
@@ -23,10 +24,4 @@ export const Secondary = Template.bind({});
 Secondary.args = {
 
   theme: 'secondary',
-};
-
-export const Danger = Template.bind({});
-Danger.args = {
-  name: 'Danger Button',
-  theme: 'danger',
 };
